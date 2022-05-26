@@ -1,0 +1,88 @@
+*{
+    margin:0; padding:0; list-style: none; text-decoration: none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+header{
+    width:100vw; height:100vh;
+    display: flex;
+    position: relative;
+    background: url(../images/nightsky.png) no-repeat center / cover;
+    justify-content: center;
+    align-items: center;
+}
+    .stroke-container{
+        position: absolute;
+        top: 2%;
+        right: 5%;
+    }
+
+        .stroke-line{
+            width: 24px;
+            height: 3px;
+            background-color: #fbfbfb;
+        }
+        .stroke-line:not(:first-of-type){
+            margin-top:4px;
+        }
+
+    .menu-navi{
+        position: absolute;
+        width:100vw;
+        top:-65px; right:0;
+        transition: 700ms ;
+    }
+
+        .menu-container{
+            display: flex;
+            background-color: #595F7C;
+            justify-content: space-around;
+        }
+
+            .menu-list-container{
+                padding:20px 0;
+            }
+
+                .menu-list{
+                    font-family: 'Roboto';
+                    font-size: 14px;
+                    font-weight: 500;
+                    color:#fbfbfb;
+                    display: block;
+                    line-height: 23px;
+                }
+    /* nav fin */
+    .title-line{
+        width: 44px;
+        height: 2px;
+        position: absolute;
+        top: 390px;
+        background: #fbfbfb;
+        /* animation */
+        animation-name: move_stroke;
+        animation-duration: 2s;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+    }
+    @keyframes move_stroke{
+        0%{
+            left:90px;
+        }
+        100%{
+            left:270px;
+        }
+    }
+
+    .title{
+        font-size:24px;
+        color:#fbfbfb;
+    }
+        .title span{
+            font-size:44px;
+            font-weight: 700;
+        }
+    

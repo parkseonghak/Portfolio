@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'LeferiBaseType-RegularA', sans-serif;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiPoint-BlackA', sans-serif;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title{
+    font-family: 'LeferiBaseType-RegularA';
+}
