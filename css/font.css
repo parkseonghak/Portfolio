@@ -11,6 +11,8 @@
     font-style: normal;
 }
 
-.title{
+.title,
+.sub-title-white,
+.about-introduce{
     font-family: 'LeferiBaseType-RegularA';
 }

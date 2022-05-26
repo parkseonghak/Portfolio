@@ -85,4 +85,31 @@ header{
             font-size:44px;
             font-weight: 700;
         }
+
+
+
+main{
+    background: linear-gradient(180deg, #2B2F4F 0%, rgba(43, 47, 79, 0) 100%);
+}
+    .sub-title-white{
+        font-size:32px;
+        font-weight: 700;
+        color:#fbfbfb;
+        text-decoration: line-through;
+        text-decoration-color: #6667AB80;
+        padding:32px 0 0 24px;
+    }
+    .about-introduce{
+        text-align: center;
+        margin-top:52px;
+        color:#fbfbfb;
+        font-size:18px;
+        font-weight: 300;
+    }
+        .point-word{
+            font-weight: 700;
+        }
     
+    .profile-container{
+        margin-top:68px;
+    }
