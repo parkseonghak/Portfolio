@@ -389,7 +389,59 @@ main{
                     font-size:20px;
                     color:#333;
                 }
+                .portfolio-explanation p{
+                    font-size:13px;
+                    margin:16px 16px 0 16px;
+                }
+        
+            .palette-title{
+                margin:20px 0;
+            }
+            .palette{
+                width: 250px;
+                margin: 0 auto;
+            }
+                .palette-color-container{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+                    .palette-color-list{
+                        display: inline-block;
+                        margin-top:12px;
+                    }
 
+                        .color-container{
+                            content: '';
+                            width: 24px; height:24px;
+                            margin:0 auto;
+                        }
+                            .color-d81b16{
+                                background-color: #D81B16;
+                            }
+                            .color-15ab49{
+                                background-color: #15ab49;
+                            }
+                            .color-4ff78a{
+                                background-color: #4ff78a;
+                            }
+                            .color-969696{
+                                background-color: #969696;
+                            }
+                            .color-222222{
+                                background-color: #222222;
+                            }
+                            .color-fbfbfb{
+                                background-color: #fbfbfb;
+                            }
+                            .palette-color-list p{
+                                margin-top:8px;
+                                font-size:16px;
+                            }
+                            .main-color{
+                                font-size:8px;
+                                font-weight: 700;
+                            }
             
     .hide-content{
         transform: translateY(100px);

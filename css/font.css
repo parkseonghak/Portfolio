@@ -18,6 +18,9 @@
 .introduce-container dl,
 .skil-tool-history,
 .view-more,
-.portfolio-information{
+.portfolio-information,
+.palette-color-list p,
+.main-color{
     font-family: 'LeferiBaseType-RegularA';
 }
+
