@@ -13,6 +13,9 @@
 
 .title,
 .sub-title-white,
-.about-introduce{
+.about-introduce,
+.profile-title,
+.introduce-container dl,
+.skil-tool-history{
     font-family: 'LeferiBaseType-RegularA';
 }

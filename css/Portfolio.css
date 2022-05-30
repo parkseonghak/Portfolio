@@ -64,15 +64,41 @@ header{
     }
     .title-line{
         position: absolute;
-        top: 0px;
         background: #fbfbfb;
-        /* animation */
-        animation-name: move_stroke;
         animation-duration: 12s;
         animation-direction: normal;
         animation-iteration-count: infinite;
     }
-    @keyframes move_stroke{
+
+    .top-line,
+    .rigght-line{
+        top:0px;
+    }
+    .bottom-line,
+    .left-line{
+        bottom:0px;
+    }
+
+    .top-line{
+        animation-name: top-line;
+    }
+    .right-line{
+        animation-name: right-line;
+        animation-delay: 3s;
+        right:0px;
+    }
+    .bottom-line{
+        animation-name: bottom-line;
+        animation-delay: 6s;
+        right:0px;
+    }
+    .left-line{
+        animation-name: left-line;
+        animation-delay: 9s;
+    }
+
+
+    @keyframes top-line{
         0%{
             width: 0px;
             height:2px;
@@ -92,78 +118,72 @@ header{
             left: 200px;
             height: 2px;
         }
-
-        25.01% {
-            height: 0px;
-            width: 2px;
-            left: 198px;
-            
-        }
-        31.25%{
-            top: 0px;
-        }
-        37.5% {
-            height: 50px;   
-        }
-        43.75% {
-            top: 50px;
-            height: 50px;
-        }
-        50%{
-            height: 0px;
-            top: 100px;
-            width:2px;
-        }
-
-        50.1%{
-            width:0px;
-            height:2px;
-            top:98px;
-        }
-        56.25%{
-            right: 0px;
-        }
-        62.5% {
-            width: 100px;
-        }
-        68.75% {
-            right: 100px;
-            width:100px;
-        }
-        75%{
-            right: 200px;
-            width: 0px;
-            height:2px;
-            top: 98px;
-            right: 198px;
-        }
-        75.1%{
+    }
+    @keyframes right-line{
+        0%{
             height:0px;
             width:2px;
-            right:200px;
-            top:98px
         }
-        
-        81.25%{
-            bottom:0px;
+        6.25% {
+            top:0px;
         }
-        87.5% {
+        12.5% {
+            height:50px;
         }
-        93.75% {
+        18.75%{
+            top:50px;
+            height:50px;
         }
-        99.9%{
-        }
-        100%{
+        25%{
+            height:0px;
+            top:100px;
+            width:2px;
         }
     }
-
-
-
-
-
-
-
-
+    @keyframes bottom-line{
+        0%{
+            width:0px;
+            height:2px;
+        }
+        6.25% {
+            right:0px;
+        }
+        12.5% {
+            width:100px;
+        }
+        18.75%{
+            width:100px;
+            right:100px;
+            height: 2px;
+        }
+        25%{
+            right:200px;
+            width:0px;
+            height:2px;
+        }
+    }
+    @keyframes left-line{
+        0%{
+            width:2px;
+            height:0px;
+        }
+        6.25% {
+            bottom:0px;
+            height:50px;
+        }
+        12.5% {
+            height:50px;
+        }
+        18.75%{
+            height:50px;
+            bottom:50px;
+        }
+        25%{
+            width:2px;
+            height:0px;
+            bottom:100px;
+        }
+    }
     .title{
         font-size:24px;
         color:#fbfbfb;
@@ -175,29 +195,125 @@ header{
         }
 
 
-
 main{
     background: linear-gradient(180deg, #2B2F4F 0%, rgba(43, 47, 79, 0) 100%);
 }
-    .sub-title-white{
-        font-size:32px;
-        font-weight: 700;
-        color:#fbfbfb;
-        text-decoration: line-through;
-        text-decoration-color: #6667AB80;
-        padding:32px 0 0 24px;
-    }
-    .about-introduce{
+    .sec-about-me{
         text-align: center;
-        margin-top:52px;
-        color:#fbfbfb;
-        font-size:18px;
-        font-weight: 300;
     }
-        .point-word{
+        .sub-title{
+            font-size:32px;
             font-weight: 700;
+            color:#fbfbfb;
+            text-decoration: line-through;
+            text-decoration-color: #6667AB;
+            padding:32px 0 0 24px;
+            text-align: left;
         }
-    
-    .profile-container{
-        margin-top:68px;
-    }
+        .about-introduce{
+            text-align: center;
+            margin-top:52px;
+            color:#fbfbfb;
+            font-size:18px;
+            font-weight: 300;
+        }
+            .point-word{
+                font-weight: 700;
+                position: relative;
+            }
+            .point-word:after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: #6667AB;
+                bottom: 0;
+                left: 0;
+            }
+        
+        .profile-container{
+            margin-top:68px;
+        }
+            .profile-title{
+                font-size:24px;
+                font-weight: 700;
+                color:#fbfbfb;
+            }
+            .profile-image-container{
+                margin-bottom: 24px;
+            }
+            .introduce-container dl{
+                display: flex;
+                justify-content: center;
+                font-size:14px;
+                color:#fbfbfb;
+                margin-top:10px;
+            }
+                .introduce-container dl:nth-of-type(1):before{
+
+                }
+                .introduce-container dl:nth-of-type(2):before{
+
+                }
+                .introduce-container dl:nth-of-type(3):before{
+
+                }
+                .introduce-container dl:nth-of-type(4):before{
+
+                }
+                .introduce-container dl:nth-of-type(5):before{
+
+                }
+                .q-introduce{
+                    margin: 0 5px;
+                    font-weight: 700;
+                }
+                .a-introduce{
+                   margin: 0 5px;
+                }
+                    .a-introduce a{
+                        color:#fbfbfb;
+                    }
+        .skil-tool-history{
+            margin-top:42px;
+            color:#fbfbfb;
+            font-size:14px;
+        }
+            .skil-tool{
+                width:120px;
+                margin:0 auto;
+                text-align: center;
+            }
+                .skil-tool-title{
+                    font-weight: 700;
+                }
+                .skil-tool-list-container{
+                    margin-top:18px;
+                }
+                    .skil-tool-list:not(:nth-of-type(3)){
+                        position: relative;
+                        padding-right:10px;
+                    }
+                    .skil-tool-list:last-child{
+                        padding:0;
+                    }
+                    .skil-tool-list:not(:last-child):after{
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        right:0; top:50%;
+                        width:2px; height:2px;
+                        background-color: #fbfbfb;
+                    }
+                    .skil-tool-list:nth-of-type(3):after{
+                        display: none;
+                    }
+            .history{
+                margin-top:36px;
+            }
+            .history-title{
+                font-weight: 700;
+            }
+            .history-list{
+                margin-top:10px;
+            }
