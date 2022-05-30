@@ -18,7 +18,7 @@ header{
     .stroke-container{
         position: absolute;
         top: 2%;
-        right: 5%;
+        right: 24px;
     }
 
         .stroke-line{
@@ -34,7 +34,7 @@ header{
         position: absolute;
         width:100vw;
         top:-65px; right:0;
-        transition: 700ms ;
+        transition-duration: 700ms ;
     }
 
         .menu-container{
@@ -200,22 +200,39 @@ main{
 }
     .sec-about-me{
         text-align: center;
+        padding-top:52px;
     }
-        .sub-title{
-            font-size:32px;
-            font-weight: 700;
-            color:#fbfbfb;
-            text-decoration: line-through;
-            text-decoration-color: #6667AB;
-            padding:32px 0 0 24px;
-            text-align: left;
+        .sub-title-container{
+            position: relative;
+            transition-duration: 1s;
         }
+            .sub-title-deco{
+                content: '';
+                width:180px; height:10px;
+                background-color: #6667AB;
+                position: absolute;
+                top: 20px; left:24px;
+            }
+            .sub-title-white{
+                font-size:32px;
+                font-weight: 700;
+                color:#fbfbfb;
+                position: absolute;
+                top:0; left: 24px;
+                text-align: left;
+            }
+            .hide-sub-title{
+                transform: translateX(-200px);
+                opacity: 0;
+            }
         .about-introduce{
             text-align: center;
-            margin-top:52px;
             color:#fbfbfb;
+            margin-top:102px;
             font-size:18px;
             font-weight: 300;
+            transition-duration: 1s;
+            opacity: 1;
         }
             .point-word{
                 font-weight: 700;
@@ -233,6 +250,7 @@ main{
         
         .profile-container{
             margin-top:68px;
+            transition-duration: 1s;
         }
             .profile-title{
                 font-size:24px;
@@ -242,6 +260,9 @@ main{
             .profile-image-container{
                 margin-bottom: 24px;
             }
+        .introduce-container{
+            transition-duration: 1s;
+        }
             .introduce-container dl{
                 display: flex;
                 justify-content: center;
@@ -250,7 +271,7 @@ main{
                 margin-top:10px;
             }
                 .introduce-container dl:nth-of-type(1):before{
-
+                    
                 }
                 .introduce-container dl:nth-of-type(2):before{
 
@@ -278,6 +299,7 @@ main{
             margin-top:42px;
             color:#fbfbfb;
             font-size:14px;
+            transition-duration: 1s;
         }
             .skil-tool{
                 width:120px;
@@ -317,3 +339,59 @@ main{
             .history-list{
                 margin-top:10px;
             }
+
+/* sec-about-me fin */
+
+    .sec-portfolio{
+        padding-top: 80px;
+        text-align: center;
+    }
+        .sub-title{
+            font-size:32px;
+            font-weight: 700;
+            color:#333;
+            position: absolute;
+            top:0; left: 24px;
+            text-align: left;
+        }
+        .view-portfolio-container{
+            margin-top:72px;
+        }
+            .portfolio-img-container{
+                width:230px; height: 152px;
+                margin:0 auto;
+                margin-bottom: 32px;
+            }
+                .portfolio-img-container img{
+                    width:100%; height:100%;
+                }
+            .view-more{
+                border:2px solid #D81B16;
+                padding:4px 8px;
+                border-radius: 50px;
+                color:#333;
+                font-weight: 700;
+                margin:0 12px;
+                transition-duration: 700ms;
+            }
+                .view-more:hover{
+                    background-color: #D81B16;
+                    color:#fbfbfb;
+                }
+        
+        .portfolio-information{
+            margin-top:24px;
+        }
+            .portfolio-explanation{
+                
+            }
+                .portfolio-title{
+                    font-size:20px;
+                    color:#333;
+                }
+
+            
+    .hide-content{
+        transform: translateY(100px);
+        opacity: 0;
+    }
