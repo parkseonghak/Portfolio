@@ -13,6 +13,7 @@
 
 .title,
 .sub-title-white,
+.sub-title,
 .about-introduce,
 .profile-title,
 .introduce-container dl,
@@ -20,7 +21,8 @@
 .view-more,
 .portfolio-information,
 .palette-color-list p,
-.main-color{
+.main-color,
+.dear-viewer{
     font-family: 'LeferiBaseType-RegularA';
 }
 
