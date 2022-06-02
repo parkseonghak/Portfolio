@@ -1,28 +1,30 @@
 @font-face {
-    font-family: 'LeferiBaseType-RegularA', sans-serif;
+    font-family: 'LeferiBaseType-RegularA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'LeferiPoint-BlackA', sans-serif;
+    font-family: 'LeferiPoint-BlackA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-.title,
-.sub-title-white,
-.sub-title,
-.about-introduce,
-.profile-title,
-.introduce-container dl,
-.skil-tool-history,
-.view-more,
-.portfolio-information,
-.palette-color-list p,
-.main-color,
-.sec-contact{
+
+body{
     font-family: 'LeferiBaseType-RegularA';
 }
+
+.menu-list,
+.title,
+.sub-title,
+.view-more{
+    font-family: 'Roboto';
+}
+.sec-about-me{
+    font-family: 'Malgun Gothic';
+}
+
 
