@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/Portfolio.css">
 </head>
 <body>
-    <header id="main-display">
+    <header id="main-display" class="body-section">
         <figure class="background-container"></figure>
         <div class="stroke-container">
             <div class="stroke-line"></div>
@@ -18,10 +18,10 @@
         </div>
         <nav class="menu-navi">
             <ul class="menu-container">
-                <li class="menu-list-container"><a href="#main-display" class="menu-list">MAIN</a></li>
-                <li class="menu-list-container"><a href="#about-me" class="menu-list">ABOUT ME</a></li>
-                <li class="menu-list-container"><a href="#portfolio" class="menu-list">PORTFOLIO</a></li>
-                <li class="menu-list-container"><a href="#contact" class="menu-list">CONTACT</a></li>
+                <li class="menu-list-container"><a href="###" class="menu-list">MAIN</a></li>
+                <li class="menu-list-container"><a href="###" class="menu-list">ABOUT ME</a></li>
+                <li class="menu-list-container"><a href="###" class="menu-list">PORTFOLIO</a></li>
+                <li class="menu-list-container"><a href="###" class="menu-list">CONTACT</a></li>
             </ul>
         </nav>
         <div class="title-container">
@@ -36,10 +36,10 @@
     <!-- header fin -->
 
     <main>
-        <section id="about-me" class="sec-about-me">
+        <section id="about-me" class="sec-about-me body-section">
             <div class="sub-title-container hide-sub-title">
                 <div class="sub-title-deco"></div>
-                <h2 class="sub-title-white">ABOUT ME</h2>
+                <h2 class="sub-title-white hide-sub-title">ABOUT ME</h2>
             </div>
             <p class="about-introduce hide-content"><span class="point-word">성실함</span>과 <span class="point-word">책임감</span>을 가지고 성장하는<br>신입 <span class="point-word">웹퍼블리셔</span>입니다</p>
             <div class="profile-container hide-content">
@@ -121,13 +121,13 @@
 
         <!-- section - aboutme fin -->
 
-        <section id="portfolio" class="sec-portfolio">
-            <div class="sub-title-container">
+        <section id="portfolio" class="sec-portfolio body-section">
+            <div class="sub-title-container hide-sub-title">
                 <div class="sub-title-deco"></div>
                 <h2 class="sub-title">PORTFOLIO</h2>
             </div>
             <div class="portfolio-container">
-                <div class="view-portfolio-container">
+                <div class="view-portfolio-container hide-content">
                 <figure class="portfolio-img-container">
                     <img src="./images/desktop_mockup.png" alt="#">
                 </figure>
@@ -135,12 +135,12 @@
                 <a href="https://parkseonghak.github.io/ORION/" target="_blank" class="view-more view-site">VIEW SITE</a>
                 </div>
                 <div class="portfolio-information">
-                <div class="portfolio-explanation">
+                <div class="portfolio-explanation hide-content">
                     <h4 class="portfolio-title">오리온제과 리뉴얼 사이트</h4>
                     <p>오리온 메인 홈페이지를 리뉴얼한 웹페이지 입니다.<br>단조로운 홈페이지에 비해 로딩이 느린점을  개선하였고,<br>기업 제품이 메인이 아닌 기업 소개가 메인인 홈페이지로 리뉴얼 해보았습니다.</p>
                 </div>
-                <h4 class="palette-title">Palette</h4>
-                <div class="palette">
+                <h4 class="palette-title hide-content">Palette</h4>
+                <div class="palette hide-content">
                     <ul class="palette-color-container">
                         <li class="palette-color-list">
                             <div class="color-container color-d81b16"></div>
@@ -175,12 +175,12 @@
 
         <!-- section - portfolio fin -->
 
-        <section id="contact" class="sec-contact">
-            <div class="sub-title-container">
+        <section id="contact" class="sec-contact body-section">
+            <div class="sub-title-container hide-sub-title">
                 <div class="sub-title-deco"></div>
                 <h2 class="sub-title">CONTACT</h3>
             </div>
-            <div class="contact-container">
+            <div class="contact-container hide-content">
                 <div class="dear-viewer">
                     <p>안녕하세요. 신입 웹퍼블리셔 박성학입니다.<br>저는 코딩을 하면서 나오는 결과물을 보며 즐거움과 기쁨을 느끼며 부족함에 있어서는 배움을 통해 성장을 해나아갑니다.<br>성실함과 책임감으로 최선을 다하는 마음가짐과 팀과의 협업에 있어서 원활한 소통을 통해 팀에게 신뢰가 될 수 있는 사람이 되며 꾸준히 성장하는 웹퍼블리셔가 되겠습니다.</p>
                 </div>
@@ -216,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="kakao-github">
+            <div class="kakao-github hide-content">
                 <figure class="kakao-github-svg">
                     <a href="http://">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 12 12" fill="none">
@@ -236,5 +236,7 @@
 
         <!-- section - contact fin -->
     </main>
+    
+    <script src="js/Portfolio.js"></script>
 </body>
 </html>
