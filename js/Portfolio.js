@@ -124,32 +124,43 @@ const mainContainer = document.querySelector('main');
 const mainHeight = mainContainer.offsetHeight;
 const mainWidth = mainContainer.offsetWidth;
 
-let randomHeight = Math.floor(Math.random() * mainHeight);
 
 
 for(let i = 0; i < 33; i++){
     let randomWidth = Math.floor(Math.random() * mainWidth);
+    let randomHeight = Math.floor(Math.random() * mainHeight);
     const yellowStar = document.createElement('div');
     mainContainer.appendChild(yellowStar);
     yellowStar.classList.add('yellow-star');
-    yellowStar.style.transform = 'translateX(' + randomWidth + ')px';
+    yellowStar.style.left = `${randomWidth}px`;
+    yellowStar.style.top = `${randomHeight}px`;
 }
 // make yellow star
 
 for(let i = 0; i < 33; i++){
+    let randomWidth = Math.floor(Math.random() * mainWidth);
+    let randomHeight = Math.floor(Math.random() * mainHeight);
     const redStar = document.createElement('div');
     mainContainer.appendChild(redStar);
     redStar.classList.add('red-star');
+    redStar.style.left = `${randomWidth}px`;
+    redStar.style.top = `${randomHeight}px`;
 }
 // make red star
 
 for(let i = 0; i < 33; i++){
+    let randomWidth = Math.floor(Math.random() * mainWidth);
+    let randomHeight = Math.floor(Math.random() * mainHeight);
     const whiteStar = document.createElement('div');
     mainContainer.appendChild(whiteStar);
     whiteStar.classList.add('white-star');
+    whiteStar.style.left = `${randomWidth}px`;
+    whiteStar.style.top = `${randomHeight}px`;
 }
 // make white star
 
+// 화면을 줄인상태에서 별이생성 > 화면을 키우면 생성된 별은 
+// 그자리에있어서 넓힌 부분은 빈공간이됨
 
 
 
@@ -166,4 +177,7 @@ for(let i = 0; i < 33; i++){
 
 
 
-// 남은것 : 이메일 클릭시 복사 , 별 랜덤 생성
+
+// 남은것 : 이메일 클릭시 복사
+
+// 스크롤 이벤트는 풀화면일시에만 가능한지 - 태블릿부터는 스크롤이벤트 X
