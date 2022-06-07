@@ -376,7 +376,17 @@ main{
                     .a-introduce a{
                         color:#fbfbfb;
                     }
-
+                
+                .copy-mail,
+                .phone-numb{
+                    transition-duration: 700ms;
+                }
+                .copy-mail:hover,
+                .phone-numb:hover{
+                    cursor: pointer;
+                    color:#6667AB;
+                }
+                
 
         .skil-tool-history{
             margin-top:42px;

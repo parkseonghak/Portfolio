@@ -56,13 +56,15 @@ section.forEach(function(item, page){
 
         let moveTop;
         let sectionSelector = section[page];
-
+        
+        console.log(sectionSelector.previousElementSibling);
+        
         if(delta < 0){
             if(moveCheck){
                 moveCheck = false;
                 if(sectionSelector !== sectionLength){
                     try{
-                        moveTop = window.pageYOffset +  sectionSelector.nextElementSibling.getBoundingClientRect().top; 
+                        moveTop = window.pageYOffset +  section[page+1].getBoundingClientRect().top; 
                         window.scrollTo({top:moveTop, left:0, behavior:"smooth"});
                     }catch(e){}
                 }
@@ -75,9 +77,11 @@ section.forEach(function(item, page){
                 moveCheck = false;
                 if(sectionSelector !== 0){
                     try{
-                        moveTop = window.pageYOffset + sectionSelector.previousElementSibling.getBoundingClientRect().top;
+                        moveTop = window.pageYOffset + section[page-1].getBoundingClientRect().top;
                         window.scrollTo({top:moveTop, left:0, behavior:"smooth"});
-                    }catch(e){}
+                    }catch(e){
+                        console.log(e);
+                    }
                 }
                 setTimeout(() => {
                     moveCheck = true;
@@ -127,35 +131,35 @@ const mainWidth = mainContainer.offsetWidth;
 
 
 for(let i = 0; i < 33; i++){
-    let randomWidth = Math.floor(Math.random() * mainWidth);
-    let randomHeight = Math.floor(Math.random() * mainHeight);
+    let randomWidth = Math.floor(Math.random() * 100);
+    let randomHeight = Math.floor(Math.random() * 100);
     const yellowStar = document.createElement('div');
-    mainContainer.appendChild(yellowStar);
+    mainContainer.insertBefore(yellowStar,mainContainer.firstChild);
     yellowStar.classList.add('yellow-star');
-    yellowStar.style.left = `${randomWidth}px`;
-    yellowStar.style.top = `${randomHeight}px`;
+    yellowStar.style.left = `${randomWidth}%`;
+    yellowStar.style.top = `${randomHeight}%`;
 }
 // make yellow star
 
 for(let i = 0; i < 33; i++){
-    let randomWidth = Math.floor(Math.random() * mainWidth);
-    let randomHeight = Math.floor(Math.random() * mainHeight);
+    let randomWidth = Math.floor(Math.random() * 100);
+    let randomHeight = Math.floor(Math.random() * 100);
     const redStar = document.createElement('div');
     mainContainer.appendChild(redStar);
     redStar.classList.add('red-star');
-    redStar.style.left = `${randomWidth}px`;
-    redStar.style.top = `${randomHeight}px`;
+    redStar.style.left = `${randomWidth}%`;
+    redStar.style.top = `${randomHeight}%`;
 }
 // make red star
 
 for(let i = 0; i < 33; i++){
-    let randomWidth = Math.floor(Math.random() * mainWidth);
-    let randomHeight = Math.floor(Math.random() * mainHeight);
+    let randomWidth = Math.floor(Math.random() * 100);
+    let randomHeight = Math.floor(Math.random() * 100);
     const whiteStar = document.createElement('div');
     mainContainer.appendChild(whiteStar);
     whiteStar.classList.add('white-star');
-    whiteStar.style.left = `${randomWidth}px`;
-    whiteStar.style.top = `${randomHeight}px`;
+    whiteStar.style.left = `${randomWidth}%`;
+    whiteStar.style.top = `${randomHeight}%`;
 }
 // make white star
 
@@ -165,6 +169,15 @@ for(let i = 0; i < 33; i++){
 
 
 
+const copyMail = document.getElementsByClassName('copy-mail');
+
+for( let i = 0 ; i < copyMail.length ; i ++) {
+    copyMail[i].addEventListener('click', () => {
+        const mailText = copyMail[i].innerText;
+        navigator.clipboard.writeText(mailText);
+        alert('Copied to clipboard!')
+    })
+}
 
 
 
@@ -172,12 +185,11 @@ for(let i = 0; i < 33; i++){
 
 
 
+// https://www.delftstack.com/ko/howto/javascript/javascript-exit/ - 함수 종료 기능
 
+// https://lookingfor.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%99%94%EB%A9%B4-%ED%81%AC%EA%B8%B0-%EA%B5%AC%ED%95%98%EA%B8%B0 - screen 객체로 화면크기 구하기 , 브라우저 크기 구하기
 
+// https://developer.mozilla.org/ko/docs/Web/API/Window/resize_event - resize 이벤트
 
+// https://hianna.tistory.com/494 - 이벤트 추가 제거
 
-
-
-// 남은것 : 이메일 클릭시 복사
-
-// 스크롤 이벤트는 풀화면일시에만 가능한지 - 태블릿부터는 스크롤이벤트 X
