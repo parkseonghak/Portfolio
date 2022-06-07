@@ -36,7 +36,7 @@ tabMenu.addEventListener('click', (e) => {
     navigationMenu.style.top = 0;
 })
 
-// 클릭 후 스크롤 하면 버벅
+
 
 // header fin
 
@@ -79,18 +79,13 @@ section.forEach(function(item, page){
                     try{
                         moveTop = window.pageYOffset + section[page-1].getBoundingClientRect().top;
                         window.scrollTo({top:moveTop, left:0, behavior:"smooth"});
-                    }catch(e){
-                        console.log(e);
-                    }
+                    }catch(e){}
                 }
                 setTimeout(() => {
                     moveCheck = true;
                 }, 1000);
             }
         }
-        // 2번째 섹션 작동안함..
-
-
     })
 })
 
@@ -163,11 +158,7 @@ for(let i = 0; i < 33; i++){
 }
 // make white star
 
-// 화면을 줄인상태에서 별이생성 > 화면을 키우면 생성된 별은 
-// 그자리에있어서 넓힌 부분은 빈공간이됨
-
-
-
+// click copy mail
 
 const copyMail = document.getElementsByClassName('copy-mail');
 
@@ -183,7 +174,7 @@ for( let i = 0 ; i < copyMail.length ; i ++) {
 
 
 
-
+// mainContainer.insertBefore(yellowStar,mainContainer.firstChild);
 
 // https://www.delftstack.com/ko/howto/javascript/javascript-exit/ - 함수 종료 기능
 
