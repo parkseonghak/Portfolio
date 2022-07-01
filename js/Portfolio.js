@@ -31,11 +31,38 @@ window.addEventListener('scroll', (e)=> {
 
 const tabMenu = document.querySelector('.stroke-container');
 const navigationMenu = document.querySelector('.menu-navi');
+const headerDisplay = document.querySelector('.body-section');
+
+function navOn(){
+    navigationMenu.style.top = 0;
+}
 
 tabMenu.addEventListener('click', (e) => {
-    navigationMenu.style.top = 0;
+    navOn();
 })
 
+window.addEventListener('resize', (e) => {
+    if(window.innerWidth > 767){
+        navOn();
+    }else{
+        navOff();
+    }
+})
+
+headerDisplay.addEventListener('click', (e) => {
+    const target = e.target;
+    console.log(e);
+    if(target.classList.contains('body-section')){
+        if(window.innerWidth < 768){
+            navOff();
+        }
+    }
+})
+
+
+function navOff(){
+    navigationMenu.style.top = '-65px';
+}
 
 
 // header fin
@@ -45,49 +72,51 @@ tabMenu.addEventListener('click', (e) => {
 
 const sectionLength = section.length;
 
-section.forEach(function(item, page){
-    item.addEventListener('mousewheel', (e) => {
-        e.preventDefault();
-        let delta = 0;
-
-        if(e.wheelDelta){
-            delta = e.wheelDelta;
-        }
-
-        let moveTop;
-        let sectionSelector = section[page];
-        
-        console.log(sectionSelector.previousElementSibling);
-        
-        if(delta < 0){
-            if(moveCheck){
-                moveCheck = false;
-                if(sectionSelector !== sectionLength){
-                    try{
-                        moveTop = window.pageYOffset +  section[page+1].getBoundingClientRect().top; 
-                        window.scrollTo({top:moveTop, left:0, behavior:"smooth"});
-                    }catch(e){}
-                }
-                setTimeout(() => {
-                    moveCheck = true;
-                }, 1000);
+    section.forEach(function(item, page){
+        item.addEventListener('mousewheel', (e) => {
+            e.preventDefault();
+            let delta = 0;
+            
+            if(e.wheelDelta){
+                delta = e.wheelDelta;
             }
-        }else{
-            if(moveCheck){
-                moveCheck = false;
-                if(sectionSelector !== 0){
-                    try{
-                        moveTop = window.pageYOffset + section[page-1].getBoundingClientRect().top;
-                        window.scrollTo({top:moveTop, left:0, behavior:"smooth"});
-                    }catch(e){}
+            
+            let moveTop;
+            let sectionSelector = section[page];
+            
+            console.log(sectionSelector.previousElementSibling);
+            
+            if(delta < 0){
+                if(moveCheck){
+                    moveCheck = false;
+                    if(sectionSelector !== sectionLength){
+                        try{
+                            moveTop = window.pageYOffset +  section[page+1].getBoundingClientRect().top; 
+                            window.scrollTo({top:moveTop, left:0, behavior:"smooth"});
+                        }catch(e){}
+                    }
+                    setTimeout(() => {
+                        moveCheck = true;
+                    }, 1000);
                 }
-                setTimeout(() => {
-                    moveCheck = true;
-                }, 1000);
-            }
-        }
-    })
-})
+            }else{
+                if(moveCheck){
+                    moveCheck = false;
+                    if(sectionSelector !== 0){
+                        try{
+                            moveTop = window.pageYOffset + section[page-1].getBoundingClientRect().top;
+                            window.scrollTo({top:moveTop, left:0, behavior:"smooth"});
+                        }catch(e){}
+                    }
+                    setTimeout(() => {
+                        moveCheck = true;
+                    }, 1000);
+                }
+                }
+
+            })
+        })
+
 
 // scroll fin
 
@@ -140,7 +169,7 @@ for(let i = 0; i < 33; i++){
     let randomWidth = Math.floor(Math.random() * 100);
     let randomHeight = Math.floor(Math.random() * 100);
     const redStar = document.createElement('div');
-    mainContainer.appendChild(redStar);
+    mainContainer.insertBefore(redStar,mainContainer.firstChild);
     redStar.classList.add('red-star');
     redStar.style.left = `${randomWidth}%`;
     redStar.style.top = `${randomHeight}%`;
@@ -151,7 +180,7 @@ for(let i = 0; i < 33; i++){
     let randomWidth = Math.floor(Math.random() * 100);
     let randomHeight = Math.floor(Math.random() * 100);
     const whiteStar = document.createElement('div');
-    mainContainer.appendChild(whiteStar);
+    mainContainer.insertBefore(whiteStar,mainContainer.firstChild);
     whiteStar.classList.add('white-star');
     whiteStar.style.left = `${randomWidth}%`;
     whiteStar.style.top = `${randomHeight}%`;
@@ -173,8 +202,6 @@ for( let i = 0 ; i < copyMail.length ; i ++) {
 
 
 
-
-// mainContainer.insertBefore(yellowStar,mainContainer.firstChild);
 
 // https://www.delftstack.com/ko/howto/javascript/javascript-exit/ - 함수 종료 기능
 

@@ -212,6 +212,10 @@ main{
     position: relative;
 }
 
+.body-section{
+    height: 100vh;
+}
+
     .yellow-star{
         position: absolute;
         width:8px; height:8px;
@@ -295,7 +299,7 @@ main{
         .about-introduce{
             text-align: center;
             color:#fbfbfb;
-            margin-top:102px;
+            margin-top:164px;
             font-size:18px;
             font-weight: 300;
             transition-duration: 1s;
@@ -457,7 +461,7 @@ main{
             text-align: left;
         }
         .view-portfolio-container{
-            margin-top:72px;
+            margin-top:140px;
             transition-duration: 1s;
             transition-delay: 500ms;
         }
@@ -590,6 +594,7 @@ main{
         .contact-container{
             transition-duration: 1s;
             transition-delay: 500ms;
+            margin-top:200px;
         }
             .dear-viewer{
                 font-size:12px;
@@ -599,7 +604,7 @@ main{
                 line-height: 24px;
             }
             .my-information{
-                margin-top:32px;
+                margin-top:80px;
             }
 
                 .info-list{
@@ -626,7 +631,7 @@ main{
             .kakao-github {
                 display: flex;
                 justify-content: center;
-                margin-top: 24px;
+                margin-top: 120px;
                 transition-duration: 1s;
                 transition-delay: 1s;
             }
@@ -649,6 +654,10 @@ main{
 /* tablet size */
 
 @media only screen and (min-width : 768px) and (max-width : 1023px) {
+    .body-section{
+        height:100vh;
+    }
+    
     .stroke-container{
         display: none;
     }
@@ -718,7 +727,7 @@ main{
     .portfolio-container{
         display: flex;
         justify-content: space-between;
-        margin: 148px 24px 0;
+        margin: 180px 24px 0;
     }
         .portfolio-img-container{
             width:300px; height:200px;
@@ -744,8 +753,9 @@ main{
     }
         .contact-container{
             display: flex;
-            margin: 120px 24px 48px;
+            margin: 260px 24px 86px;
             justify-content: space-between;
+            align-items: center;
         }
             .dear-viewer{
                 width:412px;
@@ -790,6 +800,7 @@ main{
 /* desktop size */
 
 @media only screen and (min-width : 1024px){
+    
     .stroke-container{
         display: none;
     }
