@@ -198,16 +198,3 @@ for( let i = 0 ; i < copyMail.length ; i ++) {
         alert('Copied to clipboard!')
     })
 }
-
-
-
-
-
-// https://www.delftstack.com/ko/howto/javascript/javascript-exit/ - 함수 종료 기능
-
-// https://lookingfor.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%99%94%EB%A9%B4-%ED%81%AC%EA%B8%B0-%EA%B5%AC%ED%95%98%EA%B8%B0 - screen 객체로 화면크기 구하기 , 브라우저 크기 구하기
-
-// https://developer.mozilla.org/ko/docs/Web/API/Window/resize_event - resize 이벤트
-
-// https://hianna.tistory.com/494 - 이벤트 추가 제거
-
